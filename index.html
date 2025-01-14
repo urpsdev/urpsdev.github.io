@@ -347,7 +347,7 @@
         </div>
       </div>
       <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-        <form id="contact" action="send-email.php" method="post">
+        <form id="contact">
           <div class="row">
             <div class="col-lg-6">
               <fieldset>
@@ -371,7 +371,7 @@
             </div>
             <div class="col-lg-12">
               <fieldset>
-                <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                <button type="submit" id="form-submit" class="main-button" onclick="sendMail()" >Send Message</button>
               </fieldset>
             </div>
           </div>
@@ -405,5 +405,27 @@
 <script src="assets/js/imagesloaded.js"></script>
 <script src="assets/js/templatemo-custom.js"></script>
 <!--<script src="assets/js/send-mail.js"></script> -->
+<script>
+  function sendMail() {
+      const name = document.getElementById('name').value;
+      const surname = document.getElementById('surname').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      // Validate form fields
+      if (!name || !surname || !email || !message) {
+          alert('Please fill out all fields.');
+          return;
+      }
+      const mailtoLink = `mailto:urps.pvt.ltd@gmail.com`
+          + `?subject=${encodeURIComponent(`Contact Form Submission: ${name} ${surname}`)}`
+          + `&body=${encodeURIComponent(
+              `Name: ${name} ${surname}\n` +
+              `Email: ${email}\n\n` +
+              `Message:\n${message}`
+          )}`;
+      // Open the user's default mail client
+      window.location.href = mailtoLink;
+  }
+</script>
 </body>
 </html>
