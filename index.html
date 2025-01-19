@@ -182,46 +182,10 @@
       <div class="stats col-sm-4"><h5>50+</h5><p>Sites</p> </div>
       <div class="stats col-sm-4"><h5>94%</h5><p>Retention</p> </div>
     </div><br>
-
-    <!-- Carousel -->
-    <div id="portfolio-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner" >
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img src="assets/images/portfolio/banner.jpeg" alt="banner" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/Bhagirathi-0.jpeg" alt="Bhagirathi-0" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/Bhagirathi-1.jpeg" alt="Bhagirathi-1" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/Bhagirathi-2.jpeg" alt="Bhagirathi-2" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/office.jpeg" alt="office" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/dps.jpeg" alt="dps" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/malgudi.jpeg" alt="malgudi" class="d-block w-100" >
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/care_hospital.jpeg" alt="care_hospital" class="d-block w-100">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/guard_0.jpeg" alt="guard_0" class="d-block w-100" >
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/guard_1.jpeg" alt="guard_1" class="d-block w-100" >
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/images/portfolio/guard_2.jpeg" alt="guard_2" class="d-block w-100" >
-        </div>
-      </div>
-      <!-- Left and right controls/icons -->
+    
+    <!-- Portfolio Carousel -->
+    <div id="portfolio-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel-images"></div>
       <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -229,8 +193,7 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-
-
+    
   </div>
 </div>
 <hr>
@@ -428,5 +391,27 @@
       window.location.href = mailtoLink;
   }
 </script>
+
+<script>
+  const imageFolder = "assets/images/portfolio/";
+  const imageList = [
+    "banner.jpeg", "Bhagirathi-0.jpeg", "Bhagirathi-2.jpeg",
+    "0.jpeg", "1.jpeg", "2.jpeg","3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpeg", "8.jpeg",
+    "office.jpeg", "office_0.jpeg", "malgudi.jpeg", "care_hospital.jpeg"];
+
+  // Shuffle the images
+  const shuffledImages = imageList.sort(() => Math.random() - 0.5);
+
+  // Generate carousel items
+  const carouselImages = document.getElementById('carousel-images');
+  shuffledImages.forEach((image, index) => {
+    const div = document.createElement('div');
+    div.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+    div.dataset.bsInterval = 2000;
+    div.innerHTML = `<img src="${imageFolder}${image}" alt="${image}" class="d-block w-100">`;
+    carouselImages.appendChild(div);
+  });
+</script>
+
 </body>
 </html>
