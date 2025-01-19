@@ -1,29 +1,19 @@
-.client-logos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adds spacing between logos */
-    justify-content: center; /* Centers the logos horizontally */
-}
-
 .logo-item {
-    margin: 10px;
-    flex: 0 1 calc(20% - 20px); /* Makes each logo take 20% of the row width minus spacing */
-    max-width: 150px; /* Ensures logos don't exceed a certain width */
-    text-align: center; /* Centers the logo within its container */
+    max-width: 150px; /* Controls the overall size of each logo item */
+    margin: 10px; /* Adds spacing between logos */
+    text-align: center; /* Centers the logos within each item */
 }
 
 .client-logo {
-    width: 100%; /* Makes the logo fit its container */
-    height: auto; /* Maintains the aspect ratio */
-    object-fit: contain; /* Ensures the logo is not stretched */
-    border: 1px solid #ddd; /* Optional: Add a subtle border around logos */
-    padding: 10px; /* Optional: Adds spacing inside the logo container */
-    background-color: #fff; /* Optional: Adds a background color */
-    border-radius: 5px; /* Optional: Slight rounding of logo corners */
+    width: 100%; /* Ensures the logo scales to the container width */
+    height: 100px; /* Sets a uniform height for all logos */
+    object-fit: contain; /* Maintains aspect ratio of logos without distortion */
+    filter: grayscale(0%); /* Makes logos grayscale by default */
+    transition: filter 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .client-logo:hover {
-    filter: grayscale(0); /* Optional: Highlight logo on hover */
+    filter: grayscale(1); /* Optional: Highlight logo on hover */
 }
 
 @media (max-width: 768px) {
@@ -31,4 +21,3 @@
         max-width: 100px;
     }
 }
-
