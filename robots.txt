@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://urps.in/sitemap.xml
+
+# Note: We welcome indexing of public pages. No crawl-delay set.
