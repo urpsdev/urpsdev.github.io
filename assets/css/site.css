@@ -41,6 +41,37 @@
   color: var(--brand-primary);
 }
 
+/* Industries */
+.industries .industry-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  height: 100%;
+}
+.industry-ico { font-size: 28px; color: var(--brand-primary); margin-bottom: 8px; }
+.industry-title { font-weight: 600; font-size: 0.95rem; }
+
+/* Trust */
+.trust .trust-item {
+  background: #fff;
+  border: 1px dashed #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.trust .trust-item i { color: var(--brand-primary); margin-right: 8px; }
+
+/* Testimonials */
+.testimonial {
+  background: #fff;
+  border-left: 4px solid var(--brand-primary);
+  padding: 16px;
+  border-radius: 8px;
+  font-style: italic;
+}
+.testimonial cite { display: block; margin-top: 8px; font-style: normal; color: #6b7280; }
+
 /* Floating WhatsApp button */
 .whatsapp-fab {
   position: fixed;
@@ -60,6 +91,38 @@
 }
 .whatsapp-fab:hover { filter: brightness(0.95); }
 .whatsapp-icon { font-size: 24px; line-height: 1; }
+
+/* Sticky CTA (mobile) */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffffcc;
+  backdrop-filter: saturate(180%) blur(8px);
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  z-index: 1020;
+  border-top: 1px solid #e5e7eb;
+}
+.sticky-cta-btn {
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+}
+.sticky-call { background: #0d6efd; }
+.sticky-whatsapp { background: var(--brand-success); }
+.sticky-quote { background: #6c757d; }
+
+@media (max-width: 576px) {
+  .sticky-cta { display: grid; }
+  body { padding-bottom: 68px; }
+}
 
 /* Utilities */
 .visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
