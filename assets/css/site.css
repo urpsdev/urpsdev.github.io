@@ -405,6 +405,11 @@
 .license-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: .85rem; font-weight: 600; color: #0f172a; }
 .license-badge i { font-size: 14px; }
 .badge-psara { background: #e6f0ff; border: 1px solid #cfe0ff; }
+
+/* Basic alert styles (fallback if not using Bootstrap's .alert) */
+.alert { padding: 12px 14px; border-radius: 6px; border: 1px solid transparent; margin-bottom: 12px; font-size: 0.95rem; }
+.alert-success { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.d-none { display: none !important; }
 .badge-udhyam { background: #e8fff5; border: 1px solid #c9f5e2; }
 .badge-gst { background: #fff6e6; border: 1px solid #ffe3b8; }
 .badge-esic { background: #f3e8ff; border: 1px solid #e2d4ff; }
