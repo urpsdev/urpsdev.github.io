@@ -160,8 +160,7 @@
             <li>Admin staff</li>
           </ul>
           <a href="#contact-us" class="service-cta" aria-label="Request manpower">Request manpower</a>
-        </div>
-      </div>
+  </div>
       <div class="col-12 col-md-6 col-lg-3">
         <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
           <div class="service-icon" aria-hidden="true"><i class="fa fa-building"></i></div>
@@ -170,7 +169,6 @@
           <ul class="service-tags">
             <li>Site security</li>
             <li>Property mgmt</li>
-            <li>Facility support</li>
             <li>On-ground</li>
           </ul>
           <a href="#contact-us" class="service-cta" aria-label="Discuss property support">Discuss support</a>
@@ -179,7 +177,6 @@
       <div class="col-12 col-md-6 col-lg-3">
         <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
           <div class="service-icon" aria-hidden="true"><i class="fa fa-laptop"></i></div>
-          <h3 class="service-title">Software Engineering &amp; IT Services</h3>
           <p class="service-desc">End‑to‑end software development: web/mobile apps, APIs, cloud/DevOps, automations and integrations.</p>
           <ul class="service-tags">
             <li>Web apps</li>
@@ -188,7 +185,6 @@
             <li>Automation</li>
           </ul>
           <a href="#contact-us" class="service-cta" aria-label="Discuss your software project">Discuss your project</a>
-        </div>
       </div>
     </div>
 
@@ -197,7 +193,6 @@
       <div class="row mt-2">
         <div class="col-lg-6 offset-lg-3 text-center">
           <h3 class="h5 text-muted mb-3">Industries we serve</h3>
-        </div>
       </div>
       <div class="industry-chips" role="list" aria-label="Industries we serve">
         <span class="industry-chip" role="listitem"><i class="fa fa-building" aria-hidden="true"></i> Corporate Offices</span>
@@ -219,7 +214,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+  <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
           <h2>Our <em>Portfolio</em> </h2>
         </div>
       </div>
@@ -370,6 +365,15 @@
           <div class="col-12 col-md-6 col-lg-4"><div class="trust-item"><i class="fa fa-refresh" aria-hidden="true"></i> Quick replacement commitment</div></div>
           <div class="col-12 col-md-6 col-lg-4"><div class="trust-item"><i class="fa fa-file-text-o" aria-hidden="true"></i> Reporting cadence and audits</div></div>
         </div>
+        <div class="license-strip mt-3" aria-label="Licenses and registrations">
+          <div class="license-badges">
+            <span class="license-badge badge-psara"><i class="fa fa-shield" aria-hidden="true"></i> PSARA</span>
+            <span class="license-badge badge-udhyam"><i class="fa fa-id-card-o" aria-hidden="true"></i> MSME/Udyam</span>
+            <span class="license-badge badge-gst"><i class="fa fa-file-text-o" aria-hidden="true"></i> GST</span>
+            <span class="license-badge badge-esic"><i class="fa fa-medkit" aria-hidden="true"></i> ESIC</span>
+            <span class="license-badge badge-epfo"><i class="fa fa-university" aria-hidden="true"></i> EPFO</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -510,18 +514,26 @@
             <span class="badge-chip"><i class="fa fa-phone" aria-hidden="true"></i> Call us</span>
             <a class="badge-chip" href="https://wa.me/919044908563" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
             <a class="badge-chip" href="mailto:urps.pvt.ltd@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+            <a class="badge-chip" href="assets/urps.vcf" download><i class="fa fa-address-card" aria-hidden="true"></i> Add to contacts</a>
+            <a class="badge-chip" href="https://www.google.com/maps?daddr=G-40,+Keshav+Complex,+Faizabad+Road,+Sanjay+Gandhi+Puram,+Lucknow,+226016" target="_blank" rel="noopener"><i class="fa fa-map" aria-hidden="true"></i> Directions</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-  <div class="contact-card"><form id="contact" novalidate>
+    <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+  <div class="contact-card"><form id="contact" action="https://formsubmit.co/urps.pvt.ltd@gmail.com" method="POST" novalidate>
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="URPS website enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_next" value="https://urps.in/?submitted=true#contact-us">
           <div class="row">
             <div class="col-lg-6">
               <fieldset>
     <label for="name" class="visually-hidden">First Name</label>
     <div class="form-field with-icon">
       <i class="input-ico fa fa-user" aria-hidden="true"></i>
-      <input type="text" class="form-control" name="name" id="name" placeholder="First name" autocomplete="given-name" required>
+    <input type="text" class="form-control" name="first_name" id="name" placeholder="First name" autocomplete="given-name" required>
     </div>
               </fieldset>
             </div>
@@ -530,7 +542,7 @@
     <label for="surname" class="visually-hidden">Last Name</label>
     <div class="form-field with-icon">
       <i class="input-ico fa fa-user" aria-hidden="true"></i>
-      <input type="text" class="form-control" name="surname" id="surname" placeholder="Last name" autocomplete="family-name" required>
+    <input type="text" class="form-control" name="last_name" id="surname" placeholder="Last name" autocomplete="family-name" required>
     </div>
               </fieldset>
             </div>
@@ -580,6 +592,19 @@
       <img src="assets/images/contact-decoration.png" alt="Decorative" loading="lazy">
           </div>
         </form></div>
+      </div>
+    </div>
+    <!-- Lazy map with directions -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="map-wrapper" id="map">
+          <div class="map-placeholder p-3 text-center">
+            <div class="d-flex gap-2 flex-wrap justify-content-center align-items-center">
+              <button id="load-map" class="btn btn-outline-primary btn-sm" type="button">Load map</button>
+              <a class="btn btn-link btn-sm" href="https://www.google.com/maps?daddr=G-40,+Keshav+Complex,+Faizabad+Road,+Sanjay+Gandhi+Puram,+Lucknow,+226016" target="_blank" rel="noopener">View directions</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -667,44 +692,53 @@
   -->
 </footer>
 
+<!-- Toast for form submissions -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
 <!-- Scripts -->
 <script src="assets/js/animation.js"></script>
 <script src="assets/js/templatemo-custom.js"></script>
-<!--<script src="assets/js/send-mail.js"></script> -->
 <script>
-  // Handle form submission via mailto and prevent default page reload
-  function sendMail() {
-      const name = document.getElementById('name').value;
-      const surname = document.getElementById('surname').value;
-    const phone = document.getElementById('phone').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-    const consent = document.getElementById('consent').checked;
-      // Validate form fields
-    if (!name || !surname || !phone || !email || !message || !consent) {
-      alert('Please fill out all fields and consent to be contacted.');
-          return;
-      }
-      const mailtoLink = `mailto:urps.pvt.ltd@gmail.com`
-          + `?subject=${encodeURIComponent(`Contact Form Submission: ${name} ${surname}`)}`
-          + `&body=${encodeURIComponent(
-              `Name: ${name} ${surname}\n` +
-        `Phone: ${phone}\n` +
-              `Email: ${email}\n\n` +
-              `Message:\n${message}`
-          )}`;
-      // Open the user's default mail client
-      window.location.href = mailtoLink;
+  // Success toast utility
+  function showToast(msg, isError) {
+    var t = document.getElementById('toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.remove('error');
+    if (isError) t.classList.add('error');
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 4000);
   }
-  // Attach once DOM is ready
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        sendMail();
-      });
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // Show toast if redirected after submit
+    try {
+      var url = new URL(window.location.href);
+      if (url.searchParams.get('submitted') === 'true') {
+        showToast('Thanks! We\'ll contact you shortly.');
+        url.searchParams.delete('submitted');
+        history.replaceState({}, '', url.toString());
+      }
+    } catch(e) {}
+
+    // Lazy map loader
+    var loadBtn = document.getElementById('load-map');
+    var mapWrap = document.getElementById('map');
+    function injectMap(){
+      if (!mapWrap || mapWrap.dataset.loaded) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.google.com/maps?q=' + encodeURIComponent('G-40, Keshav Complex, Faizabad Road, Sanjay Gandhi Puram, Lucknow, 226016') + '&output=embed';
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.title = 'URPS Head Office location';
+      iframe.style.width = '100%';
+      iframe.style.height = '360px';
+      iframe.setAttribute('aria-label','Map showing URPS location');
+      mapWrap.innerHTML = '';
+      mapWrap.appendChild(iframe);
+      mapWrap.dataset.loaded = 'true';
     }
+    if (loadBtn) loadBtn.addEventListener('click', injectMap);
   });
 </script>
 
