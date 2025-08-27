@@ -195,10 +195,60 @@
 
 /* Contact modern styles */
 .contact-card { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
-.form-field { position: relative; }
-.form-field .input-ico { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94a3b8; pointer-events: none; }
-.form-field.with-icon .form-control { padding-left: 34px; }
 .contact-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Improve checkbox wrapping & alignment in contact form */
+#contact .form-check { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 12px; 
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+#contact .form-check-input { 
+  width: 14px !important;
+  height: 14px !important;
+  margin-top: 3px; 
+  border: 2px solid #0d6efd !important;
+  border-radius: 2px !important;
+  flex-shrink: 0;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+#contact .form-check-input:checked {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+  background-size: 10px 10px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0 1px 3px rgba(13,110,253,0.3) !important;
+}
+
+#contact .form-check-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Smooth anchor jump below sticky header */
+#contact-us { scroll-margin-top: 110px; }
+
+/* Smooth anchor jump below sticky header */
+#contact-us { scroll-margin-top: 110px; }
 
 /* Floating WhatsApp button */
 .whatsapp-fab {
@@ -309,6 +359,24 @@
   .logo-card { width: min(44vw, 160px); }
   .logo-card img { height: 36px; }
   hr { margin: 1rem 0; }
+  /* Bigger tap targets on mobile */
+  form#contact button { width: 100%; }
+  /* Input groups already handle icon spacing; ensure comfortable touch size */
+  #contact .input-group .input-group-text { padding: .5rem .65rem; }
+  #contact .input-group .form-control { padding-top: .6rem; padding-bottom: .6rem; }
+}
+
+/* Ensure Contact menu item shows on tablet/mobile and styles correctly */
+@media (max-width: 992px) {
+  .header-area .main-nav .nav li:last-child,
+  .background-header .main-nav .nav li:last-child { display: block !important; }
+  /* Let the button wrapper behave like a normal link in the stacked menu */
+  .header-area .main-nav .nav li .main-red-button { display: contents; }
+  .header-area .main-nav .nav li:last-child a {
+    background: #f7f7f7 !important;
+    color: #191a20 !important;
+    border-radius: 0;
+  }
 }
 
 /* Social link round buttons (migrated from new-change.css) */
