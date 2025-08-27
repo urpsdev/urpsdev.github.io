@@ -13,6 +13,8 @@
   <meta property="og:image" content="https://urps.in/assets/images/logo.png">
   <meta property="og:url" content="https://urps.in">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Urban And Rural Protection Services (URPS)">
+  <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Urban And Rural Protection Services - Lucknow">
   <meta name="twitter:description" content="PSARA-certified security guard services for businesses, apartments, malls and events across Uttar Pradesh.">
@@ -24,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="//wa.me">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" href="assets/images/logo.png">
 
@@ -85,7 +89,7 @@
             <li class="scroll-to-section"><a href="#contact-us">Message Us</a></li>
             <li class="scroll-to-section"><div class="main-red-button"><a href="#contact-us">Contact Now</a></div></li>
           </ul>
-          <a class='menu-trigger'>
+          <a class='menu-trigger' aria-label="Toggle navigation menu">
             <span>Menu</span>
           </a>
           <!-- ***** Menu End ***** -->
@@ -350,7 +354,7 @@
               With a steadfast focus on quality and an unwavering pledge to timeliness, Urban And Rural Protection Services is your embodiment of security in an evolving world.
             </p>
           </div>
-          <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
+          <div class="col-lg-6 d-none d-lg-block"><img src="assets/images/about-left-image.png" alt="URPS team and operations illustration" class="img-fluid" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -635,9 +639,18 @@
     const div = document.createElement('div');
     div.className = `carousel-item ${index === 0 ? 'active' : ''}`;
     div.dataset.bsInterval = 2000;
-    div.innerHTML = `<img src="${imageFolder}${image}" alt="Portfolio image ${index + 1}" class="d-block w-100" loading="lazy">`;
+    div.innerHTML = `<img src="${imageFolder}${image}" alt="Portfolio image ${index + 1}" class="d-block w-100" loading="lazy" decoding="async">`;
     carouselImages.appendChild(div);
   });
+  // Respect reduced motion preferences by disabling auto-slide
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    const el = document.getElementById('portfolio-carousel');
+    if (el && window.bootstrap && window.bootstrap.Carousel) {
+      const instance = window.bootstrap.Carousel.getOrCreateInstance(el, { interval: false, ride: false, pause: true });
+      instance.pause();
+    }
+  }
 </script>
 
 <!-- Structured data -->
