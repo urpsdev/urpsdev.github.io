@@ -85,9 +85,7 @@
             <li class="scroll-to-section"><a href="#about">About</a></li>
             <li class="scroll-to-section"><div class="main-red-button"><a href="#contact-us">Contact</a></div></li>
           </ul>
-<hr>
-
-<!-- trust section moved up -->
+          <a class='menu-trigger' aria-label="Toggle navigation menu">
             <span>Menu</span>
           </a>
           <!-- ***** Menu End ***** -->
@@ -139,83 +137,90 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-          <h2  style="text-decoration: underline;text-underline-position: under;">What <em>we</em>  <span>Offer</span></h2>
+          <h2>What <em>we</em>  <span>Offer</span></h2>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3 col-sm-6">
-        <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-          <div class="hidden-content">
-            <h4>Security Guard Service </h4>
-            <p>Providing top-notch security guard services to ensure the safety of your premises.</p>
-          </div>
-          <div class="showed-content">
-            <img src="assets/images/services_security-guard.png" alt="Security guard services" loading="lazy">
-          </div>
+    <div class="row services-grid g-3 g-md-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+          <div class="service-icon" aria-hidden="true"><i class="fa fa-shield"></i></div>
+          <h3 class="service-title">Security Guard Service</h3>
+          <p class="service-desc">Trained, PSARA-compliant guards for sites, apartments, hospitals, events and more.</p>
+          <ul class="service-tags">
+            <li>PSARA</li>
+            <li>24x7</li>
+            <li>Armed/Unarmed</li>
+            <li>Supervision</li>
+          </ul>
+          <a href="#contact-us" class="service-cta" aria-label="Request security guards">Request guards</a>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-          <div class="hidden-content">
-            <h4>Manpower</h4>
-            <p>Our skilled workforce is ready to meet your manpower needs and drive your business forward.</p>
-          </div>
-          <div class="showed-content">
-            <img src="assets/images/services_manpower.jpeg" alt="Manpower supply" loading="lazy">
-          </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+          <div class="service-icon" aria-hidden="true"><i class="fa fa-users"></i></div>
+          <h3 class="service-title">Manpower</h3>
+          <p class="service-desc">Reliable workforce supply for operations, housekeeping, loaders and site support.</p>
+          <ul class="service-tags">
+            <li>Housekeeping</li>
+            <li>Loaders</li>
+            <li>Operators</li>
+            <li>Admin staff</li>
+          </ul>
+          <a href="#contact-us" class="service-cta" aria-label="Request manpower">Request manpower</a>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-          <div class="hidden-content">
-            <h4>Real Estate</h4>
-            <p>Unlock the potential of your real estate ventures with our expert guidance and services.</p>
-          </div>
-          <div class="showed-content">
-            <img src="assets/images/services_real-estate.jpeg" alt="Real estate services" loading="lazy">
-          </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+          <div class="service-icon" aria-hidden="true"><i class="fa fa-building"></i></div>
+          <h3 class="service-title">Real Estate</h3>
+          <p class="service-desc">Site security, property management support and on-ground coordination.</p>
+          <ul class="service-tags">
+            <li>Site security</li>
+            <li>Property mgmt</li>
+            <li>Facility support</li>
+            <li>On-ground</li>
+          </ul>
+          <a href="#contact-us" class="service-cta" aria-label="Discuss property support">Discuss support</a>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-          <div class="hidden-content">
-            <h4>Information Technology</h4>
-            <p>Leverage cutting-edge technology solutions to drive innovation in your business.</p>
-          </div>
-          <div class="showed-content">
-            <img src="assets/images/services_IT.jpeg" alt="Information technology services" loading="lazy">
-          </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+          <div class="service-icon" aria-hidden="true"><i class="fa fa-laptop"></i></div>
+          <h3 class="service-title">Software Engineering &amp; IT Services</h3>
+          <p class="service-desc">End‑to‑end software development: web/mobile apps, APIs, cloud/DevOps, automations and integrations.</p>
+          <ul class="service-tags">
+            <li>Web apps</li>
+            <li>APIs</li>
+            <li>Cloud/DevOps</li>
+            <li>Automation</li>
+          </ul>
+          <a href="#contact-us" class="service-cta" aria-label="Discuss your software project">Discuss your project</a>
         </div>
+      </div>
+    </div>
+
+    <!-- Compact industries chips inside Services -->
+    <div class="industry-chips-wrapper">
+      <div class="row mt-2">
+        <div class="col-lg-6 offset-lg-3 text-center">
+          <h3 class="h5 text-muted mb-3">Industries we serve</h3>
+        </div>
+      </div>
+      <div class="industry-chips" role="list" aria-label="Industries we serve">
+        <span class="industry-chip" role="listitem"><i class="fa fa-building" aria-hidden="true"></i> Corporate Offices</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-hospital-o" aria-hidden="true"></i> Hospitals</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-home" aria-hidden="true"></i> Residential</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-calendar" aria-hidden="true"></i> Events</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-industry" aria-hidden="true"></i> Industrial Sites</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-archive" aria-hidden="true"></i> Warehousing</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-university" aria-hidden="true"></i> Schools</span>
+        <span class="industry-chip" role="listitem"><i class="fa fa-briefcase" aria-hidden="true"></i> Retail &amp; Malls</span>
       </div>
     </div>
   </div>
 </div>
-<hr>
-
-<!-- Industries (moved inside Services) -->
-<section class="section industries">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-          <h2 style="text-decoration: underline;text-underline-position: under;">Industries <em>We</em> <span>Serve</span></h2>
-        </div>
-      </div>
-    </div>
-    <div class="row g-3 g-md-4">
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-building" aria-hidden="true"></i></div><div class="industry-title">Corporate Offices</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-hospital-o" aria-hidden="true"></i></div><div class="industry-title">Hospitals</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-home" aria-hidden="true"></i></div><div class="industry-title">Residential</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-calendar" aria-hidden="true"></i></div><div class="industry-title">Events</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-industry" aria-hidden="true"></i></div><div class="industry-title">Industrial Sites</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-archive" aria-hidden="true"></i></div><div class="industry-title">Warehousing</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-university" aria-hidden="true"></i></div><div class="industry-title">Schools</div></div></div>
-      <div class="col-6 col-md-3"><div class="industry-card"><div class="industry-ico"><i class="fa fa-briefcase" aria-hidden="true"></i></div><div class="industry-title">Retail & Malls</div></div></div>
-    </div>
-  </div>
-</section>
 <hr>
 
 <!-- *************** Portfolio *************** -->
@@ -224,32 +229,90 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-          <h2  style="text-decoration: underline;text-underline-position: under;">Our <em>Portfolio</em> </h2>
+          <h2>Our <em>Portfolio</em> </h2>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <p>We are providing quality security services to many organizations & private companies.</p><br><br><br>
-      <div class="stats col-sm-4"><h5>100+</h5><p>Customers</p> </div>
-      <div class="stats col-sm-4"><h5>500+</h5><p>Sites</p> </div>
-      <div class="stats col-sm-4"><h5>94%</h5><p>Retention</p> </div>
-    </div><br>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="lead text-center text-muted mb-3">Trusted by businesses across Uttar Pradesh for security, manpower, and on-ground execution.</p>
+      </div>
+    </div>
+    <div class="row g-3 g-md-4 portfolio-metrics">
+      <div class="col-12 col-md-4">
+        <div class="metric-card">
+          <div class="metric-icon" aria-hidden="true"><i class="fa fa-users"></i></div>
+          <div class="metric-value">100+</div>
+          <div class="metric-label">Customers</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="metric-card">
+          <div class="metric-icon" aria-hidden="true"><i class="fa fa-map-marker"></i></div>
+          <div class="metric-value">500+</div>
+          <div class="metric-label">Sites</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="metric-card">
+          <div class="metric-icon" aria-hidden="true"><i class="fa fa-line-chart"></i></div>
+          <div class="metric-value">94%</div>
+          <div class="metric-label">Retention</div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-2 mb-3">
+      <a href="#portfolio-carousel" class="service-cta" aria-label="Jump to portfolio photos">View portfolio photos</a>
+    </div>
 
     <!-- Clients (moved here) -->
     <div class="row">
-      <h4 class="text-center">Our Clients</h4>
+      <div class="col-12 text-center">
+        <h3 class="h4 mb-1">Our Clients</h3>
+        <p class="text-muted small mb-3">A few of the brands we’ve supported.</p>
+      </div>
       <div class="client-logos d-flex flex-wrap justify-content-center">
-        <div class="logo-item"><img src="assets/images/portfolio/clients/larsen-toubro-logo.png" alt="Larsen &amp; Toubro" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/gps.jpeg" alt="GPS Renewables Pvt. Ltd." class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/ga-infra.jpeg" alt="GA Infra" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/edalco.png" alt="Edalco" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/rays.jpeg" alt="Rays Power Infra Pvt. Ltd." class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/desire-water.jpeg" alt="Desire Water" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/ss-construction.jpeg" alt="SS Construction" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/bbc-construction.jpeg" alt="BBC Construction" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/he-cures.jpeg" alt="He Cures" class="client-logo" loading="lazy"></div>
-        <div class="logo-item"><img src="assets/images/portfolio/clients/dps.png" alt="Delhi Public School (DPS)" class="client-logo" loading="lazy"></div>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/larsen-toubro-logo.png" alt="Larsen &amp; Toubro" class="client-logo" loading="lazy">
+          <figcaption>Larsen &amp; Toubro</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/gps.jpeg" alt="GPS Renewables Pvt. Ltd." class="client-logo" loading="lazy">
+          <figcaption>GPS Renewables Pvt. Ltd.</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/ga-infra.jpeg" alt="GA Infra" class="client-logo" loading="lazy">
+          <figcaption>GA Infra</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/edalco.png" alt="Edalco" class="client-logo" loading="lazy">
+          <figcaption>Edalco</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/rays.jpeg" alt="Rays Power Infra Pvt. Ltd." class="client-logo" loading="lazy">
+          <figcaption>Rays Power Infra Pvt. Ltd.</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/desire-water.jpeg" alt="Desire Water" class="client-logo" loading="lazy">
+          <figcaption>Desire Water</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/ss-construction.jpeg" alt="SS Construction" class="client-logo" loading="lazy">
+          <figcaption>SS Construction</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/bbc-construction.jpeg" alt="BBC Construction" class="client-logo" loading="lazy">
+          <figcaption>BBC Construction</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/he-cures.jpeg" alt="He Cures" class="client-logo" loading="lazy">
+          <figcaption>He Cures</figcaption>
+        </figure>
+        <figure class="logo-card">
+          <img src="assets/images/portfolio/clients/dps.png" alt="Delhi Public School (DPS)" class="client-logo" loading="lazy">
+          <figcaption>Delhi Public School (DPS)</figcaption>
+        </figure>
       </div>
     </div><br>
 
@@ -275,26 +338,16 @@
   <div class="container">
     <div class="bg-light">
       <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-  <h2  style="text-decoration: underline;text-underline-position: under;">About <em>URPS</em> </h2>
+  <h2>About <em>URPS</em> </h2>
       </div>
       <div class="container py-5">
         <div class="row h-100 align-items-center py-5">
           <div class="col-lg-6">
-            <p class=" font-italic text-muted mb-4">
-              Welcome to Urban And Rural Protection Services, a pioneering force in security services headquartered in Lucknow.
-              As a trailblazer in the realm of safety and protection, we have firmly established our presence across Uttar Pradesh, India.
-              Recognized and authorized under the aegis of the Private Security Agencies (Regulation) Act, 2005, our commitment to excellence is unwavering.<br><br>
-
-              We specialize in a spectrum of security provisions that encompass Security Guard Services, Armed Guard Security Services, Trained Security Guard Services,
-              and even Gunman Security Services. Our expertise extends to VIP and Executive Security Services, Corporate Security Services,
-              and the vigilant protection of Industrial and Domestic domains. We are the vanguard of Project and Event Security Services,
-              and our proficiency encompasses the roles of Personal Bodyguards.<br><br>
-
-              In our pursuit of mastery, we offer comprehensive Security Guards Training and deliver peerless Security Guards Recruitment Services. Our team embodies Security Supervisors of the highest caliber, and our guarding services stand as a paragon of vigilance.
-              Embracing diversity, we proudly extend our services through Lady Guarding Services, Manpower Services, and the dynamic realm of Online E-commerce.<br>
-
-              Our ethos revolves around an unswerving pursuit of excellence. We consistently push the boundaries to provide services that not only meet but exceed expectations. Driven by innovation and backed by experience, we shape security solutions that resonate with our clients' distinctive needs.
-              With a steadfast focus on quality and an unwavering pledge to timeliness, Urban And Rural Protection Services is your embodiment of security in an evolving world.
+            <p class="about-lead text-muted mb-3">
+              Urban And Rural Protection Services (URPS) is a Lucknow‑based security and manpower partner serving businesses across Uttar Pradesh. We’ve been operating since 2017 and were incorporated as a private limited company in 2020.
+            </p>
+            <p class="about-lead text-muted mb-3">
+              We deploy trained armed/unarmed guards for corporate, residential, hospital, industrial and event sites—backed by 24x7 supervision, fast replacement, and clear reporting. URPS operates with PSARA licensing and is compliant with MSME (Udyam), GST, ESIC and EPFO requirements.
             </p>
           </div>
           <div class="col-lg-6 d-none d-lg-block"><img src="assets/images/about-left-image.png" alt="URPS team and operations illustration" class="img-fluid" loading="lazy"></div>
@@ -316,7 +369,7 @@
             </p>
             <a href="#services" class="btn btn-light px-5 rounded-pill shadow-sm">Explore services</a>
           </div>
-          <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets/images/vision.png" alt="URPS vision illustration" class="img-fluid mb-4 mb-lg-0" loading="lazy"></div>
+          <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets/images/services-left-image.png" alt="URPS vision illustration" class="img-fluid mb-4 mb-lg-0" loading="lazy"></div>
         </div>
         <div class="row g-3 g-md-4 trust-list">
           <div class="col-12 col-md-6 col-lg-4"><div class="trust-item"><i class="fa fa-shield" aria-hidden="true"></i> PSARA-certified agency</div></div>
@@ -369,14 +422,16 @@
           <!-- End-->
 
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-6 offset-lg-3 text-center">
-            <h2 style="text-decoration: underline;text-underline-position: under;">What Clients Say</h2>
+        <div class="about-testimonials">
+          <div class="row mt-5 mb-2">
+            <div class="col-lg-6 offset-lg-3 text-center">
+              <h2 class="section-subtitle">What Clients Say</h2>
+            </div>
           </div>
-        </div>
-        <div class="row g-3 g-md-4">
+          <div class="row g-3 g-md-4">
           <div class="col-md-6"><blockquote class="testimonial">“Reliable guards and responsive supervision. Onboarding was smooth and professional.”<cite>— Facility Manager, Lucknow</cite></blockquote></div>
           <div class="col-md-6"><blockquote class="testimonial">“We received trained manpower on short notice for our site. Great coordination.”<cite>— Project Lead, UP</cite></blockquote></div>
+          </div>
         </div>
       </div>
     </div>
@@ -385,66 +440,7 @@
 </div>
 <hr>
 
-<!-- *************** Credentials & Trust *************** -->
-<section id="trust" class="section bg-light trust">
-  <div class="container py-4 py-md-5">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3 text-center">
-        <h2 style="text-decoration: underline;text-underline-position: under;">Credentials &amp; <em>Trust</em></h2>
-        <p class="text-muted">We invest in training, verification, and supervision to keep your people and assets safe.</p>
-      </div>
-    </div>
-    <div class="row g-3 g-md-4 trust-list">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-shield" aria-hidden="true"></i> PSARA-certified agency</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-user" aria-hidden="true"></i> Verified staff (KYC/Police Verification)</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-clipboard" aria-hidden="true"></i> Structured training and onboarding</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 24x7 operations and supervision</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-refresh" aria-hidden="true"></i> Quick replacement commitment</div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="trust-item"><i class="fa fa-file-text-o" aria-hidden="true"></i> Reporting cadence and audits</div>
-      </div>
-    </div>
-  </div>
-</section>
-<hr>
-
-<!-- *************** Testimonials *************** -->
-<section id="testimonials" class="section testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-          <h2 style="text-decoration: underline;text-underline-position: under;">What <em>Clients</em> <span>Say</span></h2>
-        </div>
-      </div>
-    </div>
-    <div class="row g-3 g-md-4">
-      <div class="col-md-6">
-        <blockquote class="testimonial">
-          “Reliable guards and responsive supervision. Onboarding was smooth and professional.”
-          <cite>— Facility Manager, Lucknow</cite>
-        </blockquote>
-      </div>
-      <div class="col-md-6">
-        <blockquote class="testimonial">
-          “We received trained manpower on short notice for our site. Great coordination.”
-          <cite>— Project Lead, UP</cite>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-<hr>
+<!-- trust and testimonials consolidated inside About -->
 
 
 <!-- *************** Contact Us *************** -->
@@ -464,39 +460,59 @@
           <div class="address">
             <p> Head Office: G-40, Keshav Complex, Faizabad Road, Sanjay Gandhi Puram, Lucknow (U.P.) – 226016.</p>
           </div>
+          <div class="contact-chips mt-2">
+            <span class="badge-chip"><i class="fa fa-phone" aria-hidden="true"></i> Call us</span>
+            <a class="badge-chip" href="https://wa.me/919044908563" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+            <a class="badge-chip" href="mailto:urps.pvt.ltd@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+          </div>
         </div>
       </div>
       <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-  <form id="contact" novalidate>
+  <div class="contact-card"><form id="contact" novalidate>
           <div class="row">
             <div class="col-lg-6">
               <fieldset>
     <label for="name" class="visually-hidden">First Name</label>
-    <input type="text" name="name" id="name" placeholder="First name" autocomplete="given-name" required>
+    <div class="form-field with-icon">
+      <i class="input-ico fa fa-user" aria-hidden="true"></i>
+      <input type="text" class="form-control" name="name" id="name" placeholder="First name" autocomplete="given-name" required>
+    </div>
               </fieldset>
             </div>
             <div class="col-lg-6">
               <fieldset>
     <label for="surname" class="visually-hidden">Last Name</label>
-    <input type="text" name="surname" id="surname" placeholder="Last name" autocomplete="family-name" required>
+    <div class="form-field with-icon">
+      <i class="input-ico fa fa-user" aria-hidden="true"></i>
+      <input type="text" class="form-control" name="surname" id="surname" placeholder="Last name" autocomplete="family-name" required>
+    </div>
               </fieldset>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-6">
               <fieldset>
     <label for="phone" class="visually-hidden">Phone</label>
-    <input type="tel" name="phone" id="phone" placeholder="Phone" autocomplete="tel" inputmode="tel" required>
+    <div class="form-field with-icon">
+      <i class="input-ico fa fa-phone" aria-hidden="true"></i>
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" autocomplete="tel" inputmode="tel" required>
+    </div>
               </fieldset>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-6">
               <fieldset>
     <label for="email" class="visually-hidden">Email</label>
-    <input type="email" name="email" id="email" placeholder="Your email" required>
+    <div class="form-field with-icon">
+      <i class="input-ico fa fa-envelope" aria-hidden="true"></i>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Your email" required>
+    </div>
               </fieldset>
             </div>
             <div class="col-lg-12">
               <fieldset>
     <label for="message" class="visually-hidden">Message</label>
-    <textarea name="message" class="form-control" id="message" placeholder="Message" required rows="4"></textarea>
+    <div class="form-field with-icon">
+      <i class="input-ico fa fa-commenting" aria-hidden="true"></i>
+      <textarea name="message" class="form-control" id="message" placeholder="Message" required rows="4"></textarea>
+    </div>
               </fieldset>
             </div>
             <div class="col-lg-12 mb-2">
@@ -506,6 +522,7 @@
                   I agree to be contacted by URPS via phone or email.
                 </label>
               </div>
+              <p id="contact-help" class="text-muted small mt-2">We typically respond within 24 hours.</p>
             </div>
             <div class="col-lg-12">
               <fieldset>
@@ -516,7 +533,7 @@
           <div class="contact-dec">
       <img src="assets/images/contact-decoration.png" alt="Decorative" loading="lazy">
           </div>
-        </form>
+        </form></div>
       </div>
     </div>
   </div>
@@ -601,7 +618,7 @@
     const div = document.createElement('div');
     div.className = `carousel-item ${index === 0 ? 'active' : ''}`;
     div.dataset.bsInterval = 2000;
-    div.innerHTML = `<img src="${imageFolder}${image}" alt="Portfolio image ${index + 1}" class="d-block w-100" loading="lazy" decoding="async">`;
+  div.innerHTML = `<img src="${imageFolder}${image}" alt="Portfolio image ${index + 1}" class="d-block w-100" loading="lazy" decoding="async" sizes="(min-width: 992px) 900px, 100vw" draggable="false">`;
     carouselImages.appendChild(div);
   });
   // Respect reduced motion preferences by disabling auto-slide
