@@ -208,10 +208,13 @@
   border-radius: 8px;
 }
 
-#contact .form-check-input { 
+#contact .form-check-input {
+  inline-size: 14px !important; /* logical width */
+  block-size: 14px !important;  /* logical height */
   width: 14px !important;
   height: 14px !important;
-  margin-top: 3px; 
+  aspect-ratio: 1 / 1; /* enforce square in newer browsers */
+  margin-top: 2px; /* align with first line of label */
   border: 2px solid #0d6efd !important;
   border-radius: 2px !important;
   flex-shrink: 0;
@@ -220,7 +223,9 @@
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
   min-width: 14px !important;
+  min-height: 14px !important;
   max-width: 14px !important;
+  max-height: 14px !important;
   appearance: none !important;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
@@ -410,6 +415,10 @@
 .alert { padding: 12px 14px; border-radius: 6px; border: 1px solid transparent; margin-bottom: 12px; font-size: 0.95rem; }
 .alert-success { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
 .d-none { display: none !important; }
+
+/* Map placeholder */
+.map-wrapper { border: 1px solid #eef2f7; border-radius: 12px; overflow: hidden; background: #fff; }
+.map-placeholder { display: grid; place-items: center; min-height: 280px; background: linear-gradient(135deg, #f8fafc, #eef2f7); color: #475569; font-weight: 600; }
 .badge-udhyam { background: #e8fff5; border: 1px solid #c9f5e2; }
 .badge-gst { background: #fff6e6; border: 1px solid #ffe3b8; }
 .badge-esic { background: #f3e8ff; border: 1px solid #e2d4ff; }
