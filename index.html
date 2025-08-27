@@ -542,20 +542,83 @@
 
 
 <!-- *************** Footer *************** -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-  <p>© 2025 Urban And Rural Protection Services. All rights reserved. 
-    <span class="ms-2">
-      <a href="/privacy.html">Privacy Policy</a> ·
-      <a href="/terms.html">Terms</a> ·
-      <a href="/sitemap.xml">Sitemap</a>
-    </span>
-  </p>
+<footer class="site-footer" role="contentinfo">
+  <!-- CTA band -->
+  <div class="footer-cta">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-3 py-md-4">
+      <h3 class="h6 mb-2 mb-md-0">Ready to secure your site or staffing?</h3>
+      <div class="d-flex gap-2">
+        <a href="#contact-us" class="btn btn-primary btn-sm">Get a quote</a>
+        <a href="tel:+919044908563" class="btn btn-outline-primary btn-sm" aria-label="Call URPS">Call</a>
       </div>
     </div>
   </div>
+
+  <!-- Main footer content -->
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-5">
+        <div class="footer-brand d-flex align-items-center gap-2">
+          <img src="assets/images/logo.png" alt="URPS logo" width="40" height="40" loading="lazy">
+          <span class="brand-name">Urban And Rural Protection Services</span>
+        </div>
+        <p class="small text-muted mt-2">PSARA-certified partner for security guards and manpower across Uttar Pradesh. Supervised operations, verified staff, and clear reporting.</p>
+        <ul class="footer-contact list-unstyled small mb-0">
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i> G-40, Keshav Complex, Faizabad Road, Sanjay Gandhi Puram, Lucknow (U.P.) – 226016</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+919044908563">+91-9044908563</a> / <a href="tel:+919565293096">+91-9565293096</a></li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:urps.pvt.ltd@gmail.com">urps.pvt.ltd@gmail.com</a></li>
+        </ul>
+        <div class="footer-social mt-2">
+          <a href="https://wa.me/919044908563" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-ico whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="tel:+919044908563" aria-label="Call" class="social-ico call"><i class="fa fa-phone" aria-hidden="true"></i></a>
+          <a href="mailto:urps.pvt.ltd@gmail.com" aria-label="Email" class="social-ico email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="footer-title">Company</h6>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="footer-title">Legal</h6>
+        <ul class="footer-links list-unstyled">
+          <li><span class="link-muted" title="Coming soon">Privacy Policy</span></li>
+          <li><span class="link-muted" title="Coming soon">Terms</span></li>
+          <li><span class="link-muted" title="Available">Sitemap</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container py-3">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <p class="small mb-0">© <span id="year">2025</span> Urban And Rural Protection Services. All rights reserved.</p>
+        <p class="small mb-0 text-muted">Privacy Policy · Terms · Sitemap</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Future: Google Map embed for Head Office (keep commented until ready) -->
+  <!--
+  <div class="footer-map">
+    <div class="container py-3">
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.google.com/maps?q=G-40,+Keshav+Complex,+Faizabad+Road,+Sanjay+Gandhi+Puram,+Lucknow,+226016&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="URPS Head Office location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  -->
 </footer>
 
 <!-- Scripts -->
@@ -675,6 +738,13 @@
   <a href="https://wa.me/919044908563" target="_blank" rel="noopener" class="sticky-cta-btn sticky-whatsapp">WhatsApp</a>
   <a href="#contact-us" class="sticky-cta-btn sticky-quote">Get Quote</a>
   </div>
+<script>
+  // Set dynamic year in footer
+  (function(){
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+ </script>
 
 </body>
 </html>
