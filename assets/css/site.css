@@ -1,0 +1,65 @@
+/* Site-specific polish and utilities */
+:root {
+  --brand-primary: #0d6efd;
+  --brand-accent: #d63384;
+  --brand-success: #25d366; /* WhatsApp */
+}
+
+.announcement-bar {
+  background: #fff5f5;
+  color: #a10000;
+  text-align: center;
+  padding: 8px 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #ffd6d6;
+}
+
+/* Hero tweaks */
+.left-content .btn {
+  border-radius: 999px;
+}
+
+/* Client logos grid spacing */
+.client-logos .logo-item {
+  padding: 10px 16px;
+}
+.client-logo {
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter .2s ease, transform .2s ease;
+}
+.client-logo:hover {
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats h5 {
+  font-size: 2rem;
+  color: var(--brand-primary);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1030;
+  background: var(--brand-success);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+.whatsapp-fab:hover { filter: brightness(0.95); }
+.whatsapp-icon { font-size: 24px; line-height: 1; }
+
+/* Utilities */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
