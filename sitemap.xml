@@ -7,12 +7,22 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 <url>
   <loc>https://urps.in/</loc>
-  <lastmod>2025-01-16T01:53:58+00:00</lastmod>
+  <lastmod>2025-08-27T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://urps.in/index.html</loc>
-  <lastmod>2025-01-16T01:53:58+00:00</lastmod>
+  <lastmod>2025-08-27T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://urps.in/privacy.html</loc>
+  <lastmod>2025-08-27T00:00:00+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://urps.in/terms.html</loc>
+  <lastmod>2025-08-27T00:00:00+00:00</lastmod>
+  <priority>0.40</priority>
 </url>
 </urlset>
