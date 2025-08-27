@@ -195,10 +195,65 @@
 
 /* Contact modern styles */
 .contact-card { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
-.form-field { position: relative; }
-.form-field .input-ico { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94a3b8; pointer-events: none; }
-.form-field.with-icon .form-control { padding-left: 34px; }
 .contact-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Improve checkbox wrapping & alignment in contact form */
+#contact .form-check { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 12px; 
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+#contact .form-check-input {
+  inline-size: 14px !important; /* logical width */
+  block-size: 14px !important;  /* logical height */
+  width: 14px !important;
+  height: 14px !important;
+  aspect-ratio: 1 / 1; /* enforce square in newer browsers */
+  margin-top: 2px; /* align with first line of label */
+  border: 2px solid #0d6efd !important;
+  border-radius: 2px !important;
+  flex-shrink: 0;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  min-width: 14px !important;
+  min-height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+#contact .form-check-input:checked {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+  background-size: 10px 10px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0 1px 3px rgba(13,110,253,0.3) !important;
+}
+
+#contact .form-check-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Smooth anchor jump below sticky header */
+#contact-us { scroll-margin-top: 110px; }
+
+/* Smooth anchor jump below sticky header */
+#contact-us { scroll-margin-top: 110px; }
 
 /* Floating WhatsApp button */
 .whatsapp-fab {
@@ -308,7 +363,51 @@
   .main-banner .right-image img { max-height: 280px; width: 100%; height: auto; object-fit: cover; }
   .logo-card { width: min(44vw, 160px); }
   .logo-card img { height: 36px; }
-  hr { margin: 1rem 0; }
+  /* Normalize nav item padding/alignment so all items line up the same */
+  .header-area .main-nav .nav li,
+  .background-header .main-nav .nav li { padding-left: 0 !important; padding-right: 0 !important; }
+  .header-area .main-nav .nav li a,
+  .background-header .main-nav .nav li a { display: block; padding: 16px !important; height: auto; line-height: 1.5; text-align: center; }
+
+  /* Ensure Contact (last item) matches other items in mobile and keeps readable text */
+  .header-area .main-nav .nav li:last-child a,
+  .background-header .main-nav .nav li:last-child a {
+    background: transparent !important;
+    color: #191a20 !important;
+    border-radius: 0;
+  }
+  .header-area .main-nav .nav li:last-child a:hover,
+  .header-area .main-nav .nav li:last-child a:focus,
+  .header-area .main-nav .nav li:last-child a.active,
+  .background-header .main-nav .nav li:last-child a:hover,
+  .background-header .main-nav .nav li:last-child a:focus,
+  .background-header .main-nav .nav li:last-child a.active {
+    background: #f0f2f5 !important;
+  color: #fe3f40 !important; /* match theme red */
+  }
+  #contact .input-group .form-control { padding-top: .6rem; padding-bottom: .6rem; }
+}
+
+/* Ensure Contact menu item shows on tablet/mobile and styles correctly */
+@media (max-width: 992px) {
+  .header-area .main-nav .nav li:last-child,
+  .background-header .main-nav .nav li:last-child { display: block !important; }
+  /* Let the button wrapper behave like a normal link in the stacked menu */
+  .header-area .main-nav .nav li .main-red-button { display: contents; }
+  .header-area .main-nav .nav li:last-child a {
+    background: #f7f7f7 !important;
+    color: #191a20 !important;
+    border-radius: 0;
+  }
+  /* Make Contact hover/active red like other items on tablet/mobile */
+  .header-area .main-nav .nav li:last-child a:hover,
+  .header-area .main-nav .nav li:last-child a:focus,
+  .header-area .main-nav .nav li:last-child a.active,
+  .background-header .main-nav .nav li:last-child a:hover,
+  .background-header .main-nav .nav li:last-child a:focus,
+  .background-header .main-nav .nav li:last-child a.active {
+    color: #fe3f40 !important;
+  }
 }
 
 /* Social link round buttons (migrated from new-change.css) */
@@ -337,6 +436,26 @@
 .license-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; font-size: .85rem; font-weight: 600; color: #0f172a; }
 .license-badge i { font-size: 14px; }
 .badge-psara { background: #e6f0ff; border: 1px solid #cfe0ff; }
+
+/* Basic alert styles (fallback if not using Bootstrap's .alert) */
+.alert { padding: 12px 14px; border-radius: 6px; border: 1px solid transparent; margin-bottom: 12px; font-size: 0.95rem; }
+.alert-success { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.d-none { display: none !important; }
+
+/* Map placeholder */
+.map-wrapper { border: 1px solid #eef2f7; border-radius: 12px; overflow: hidden; background: #fff; }
+.map-placeholder { display: grid; place-items: center; min-height: 280px; background: linear-gradient(135deg, #f8fafc, #eef2f7); color: #475569; font-weight: 600; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Improve focus visibility if the base theme suppresses outlines */
+:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }
+
+/* Minor performance: ensure images don’t exceed container */
+img { max-width: 100%; height: auto; }
 .badge-udhyam { background: #e8fff5; border: 1px solid #c9f5e2; }
 .badge-gst { background: #fff6e6; border: 1px solid #ffe3b8; }
 .badge-esic { background: #f3e8ff; border: 1px solid #e2d4ff; }
