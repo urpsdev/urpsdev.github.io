@@ -363,11 +363,28 @@
   .main-banner .right-image img { max-height: 280px; width: 100%; height: auto; object-fit: cover; }
   .logo-card { width: min(44vw, 160px); }
   .logo-card img { height: 36px; }
-  hr { margin: 1rem 0; }
-  /* Bigger tap targets on mobile */
-  form#contact button { width: 100%; }
-  /* Input groups already handle icon spacing; ensure comfortable touch size */
-  #contact .input-group .input-group-text { padding: .5rem .65rem; }
+  /* Normalize nav item padding/alignment so all items line up the same */
+  .header-area .main-nav .nav li,
+  .background-header .main-nav .nav li { padding-left: 0 !important; padding-right: 0 !important; }
+  .header-area .main-nav .nav li a,
+  .background-header .main-nav .nav li a { display: block; padding: 16px !important; height: auto; line-height: 1.5; text-align: center; }
+
+  /* Ensure Contact (last item) matches other items in mobile and keeps readable text */
+  .header-area .main-nav .nav li:last-child a,
+  .background-header .main-nav .nav li:last-child a {
+    background: transparent !important;
+    color: #191a20 !important;
+    border-radius: 0;
+  }
+  .header-area .main-nav .nav li:last-child a:hover,
+  .header-area .main-nav .nav li:last-child a:focus,
+  .header-area .main-nav .nav li:last-child a.active,
+  .background-header .main-nav .nav li:last-child a:hover,
+  .background-header .main-nav .nav li:last-child a:focus,
+  .background-header .main-nav .nav li:last-child a.active {
+    background: #f0f2f5 !important;
+  color: #fe3f40 !important; /* match theme red */
+  }
   #contact .input-group .form-control { padding-top: .6rem; padding-bottom: .6rem; }
 }
 
@@ -381,6 +398,15 @@
     background: #f7f7f7 !important;
     color: #191a20 !important;
     border-radius: 0;
+  }
+  /* Make Contact hover/active red like other items on tablet/mobile */
+  .header-area .main-nav .nav li:last-child a:hover,
+  .header-area .main-nav .nav li:last-child a:focus,
+  .header-area .main-nav .nav li:last-child a.active,
+  .background-header .main-nav .nav li:last-child a:hover,
+  .background-header .main-nav .nav li:last-child a:focus,
+  .background-header .main-nav .nav li:last-child a.active {
+    color: #fe3f40 !important;
   }
 }
 
