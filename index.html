@@ -65,18 +65,18 @@
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="logo" style="width: 100px;height:100px;">
+            <img src="assets/images/logo.png" alt="URPS – Urban And Rural Protection Services logo" style="width: 100px;height:100px;" width="100" height="100">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
-          <ul class="nav">
+          <ul class="nav" id="primary-nav">
             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
             <li class="scroll-to-section"><a href="#services">Services</a></li>
             <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
             <li class="scroll-to-section"><a href="#about">About</a></li>
             <li class="scroll-to-section"><div class="main-red-button"><a href="#contact-us">Contact</a></div></li>
           </ul>
-          <a class='menu-trigger' aria-label="Toggle navigation menu">
+          <a class='menu-trigger' href="#" role="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
             <span>Menu</span>
           </a>
           <!-- ***** Menu End ***** -->
@@ -616,6 +616,16 @@
           // Also scroll into view if anchored to #contact-us
           const anchor = document.getElementById('contact-us');
           if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // Toggle aria-expanded on mobile menu trigger for a11y
+        const trigger = document.querySelector('.menu-trigger');
+        const nav = document.getElementById('primary-nav');
+        if (trigger && nav) {
+          trigger.addEventListener('click', function(e){
+            e.preventDefault();
+            const expanded = trigger.getAttribute('aria-expanded') === 'true';
+            trigger.setAttribute('aria-expanded', (!expanded).toString());
+          });
         }
       } catch (e) { /* no-op */ }
     })();
