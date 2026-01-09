@@ -38,7 +38,7 @@
 /* Client logo cards */
 .logo-card { margin: 8px 10px; padding: 10px 12px; border: 1px solid #eef2f7; border-radius: 10px; background: #fff; text-align: center; width: 160px; }
 .logo-card img { display: block; margin: 0 auto 6px; max-width: 100%; height: 44px; object-fit: contain; }
-.logo-card figcaption { font-size: .75rem; color: #6b7280; line-height: 1.2; }
+.logo-card figcaption { font-size: .75rem; color: #4b5563; line-height: 1.2; }
 
 /* Stats */
 .stats h5 {
@@ -94,7 +94,7 @@
 .services-grid > div:nth-of-type(4) .service-icon { background: linear-gradient(135deg, #6f42c1, #aa88ff); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2), 0 4px 10px rgba(111,66,193,.25); }
 .service-icon i { font-size: 20px; }
 .service-title { font-size: 1.05rem; margin: 6px 0 2px; }
-.service-desc { color: #6b7280; font-size: .95rem; margin: 0 0 4px; }
+.service-desc { color: #4b5563; font-size: .95rem; margin: 0 0 4px; }
 .service-cta { align-self: flex-start; font-weight: 600; color: var(--brand-primary); text-decoration: none; }
 .service-cta:hover { text-decoration: underline; }
 
@@ -120,7 +120,7 @@
 .portfolio-metrics > div:nth-of-type(3) .metric-icon { background: linear-gradient(135deg, #6f42c1, #aa88ff); }
 .metric-icon i { font-size: 20px; }
 .metric-value { font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; color: var(--brand-primary); }
-.metric-label { color: #6b7280; margin-top: 2px; }
+.metric-label { color: #4b5563; margin-top: 2px; }
 
 /* Portfolio carousel image sizing */
 #portfolio-carousel .carousel-item img {
@@ -178,7 +178,7 @@
   border-radius: 8px;
   font-style: italic;
 }
-.testimonial cite { display: block; margin-top: 8px; font-style: normal; color: #6b7280; }
+.testimonial cite { display: block; margin-top: 8px; font-style: normal; color: #4b5563; }
 
 /* Info card (used in Vision) */
 .info-card { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; padding: 18px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
@@ -418,7 +418,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: #374151;
   border-radius: 50%;
   transition: all 0.3s;
   font-size: 0.9rem;
@@ -427,7 +427,7 @@
 .social-link:focus {
   background: #ddd;
   text-decoration: none;
-  color: #555;
+  color: #1f2937;
 }
 
 /* Licenses & Registrations strip */
@@ -472,3 +472,9 @@ img { max-width: 100%; height: auto; }
 
 /* Focus visibility improvements */
 a:focus-visible, button:focus-visible, .social-ico:focus-visible, .service-cta:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; border-radius: 8px; }
+
+/* Touch target size - WCAG 2.2 requires min 44x44px for interactive elements */
+.social-ico, .menu-trigger, .carousel-control-prev, .carousel-control-next, .whatsapp-fab { min-width: 44px; min-height: 44px; }
+.btn { min-height: 44px; padding-left: 16px; padding-right: 16px; }
+.service-cta { display: inline-block; min-height: 44px; line-height: 44px; padding: 0 8px; }
+.nav a { min-height: 44px; display: inline-flex; align-items: center; }
